@@ -231,36 +231,36 @@
 //     innerDiv.append(h2, paragraph);
 // }
 
-// // - Є масив
-//
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
-// ];
-// // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
-// //     Завдання робити через цикли.
-// let div = document.createElement('div');
-// document.body.appendChild(div);
-// for (const item of coursesAndDurationArray) {
-//
-//     let innerDiv = document.createElement('div');
-//     innerDiv.setAttribute('class', 'item');
-//     div.appendChild(innerDiv);
-//
-//     let h2 = document.createElement('h2');
-//     h2.classList.add('heading');
-//     h2.innerText = `${item.title}`;
-//
-//     let paragraph = document.createElement('p');
-//     paragraph.setAttribute('class', 'description');
-//     paragraph.innerText = `${item.monthDuration}`;
-//
-//     innerDiv.append(h2, paragraph);
-// }
+// - Є масив
+
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+// За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
+//     Завдання робити через цикли.
+let div = document.createElement('div');
+document.body.appendChild(div);
+for (const item of coursesAndDurationArray) {
+
+    let innerDiv = document.createElement('div');
+    innerDiv.setAttribute('class', 'item');
+    div.appendChild(innerDiv);
+
+    let h2 = document.createElement('h2');
+    h2.classList.add('heading');
+    h2.innerText = `${item.title}`;
+
+    let paragraph = document.createElement('p');
+    paragraph.setAttribute('class', 'description');
+    paragraph.innerText = `${item.monthDuration}`;
+
+    innerDiv.append(h2, paragraph);
+}
 
 
 // //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так,
@@ -298,38 +298,38 @@
 //     }
 // }
 
-// *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
-//     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
-// (Додатковачастина для завдання)
-
-let input1 = document.createElement('input');
-let input2 = document.createElement('input');
-let input3 = document.createElement('input');
-
-let button = document.createElement('button');
-button.innerText = 'click';
-
-document.body.append(input1, input2, input3, button);
-
-button.addEventListener('click', function () {
-    let row = input1.value;
-    let col = input2.value;
-    let txt = input3.value;
-
-    let generator = (tr, td, text) => {
-        let table = document.createElement('table');
-        document.body.appendChild(table);
-
-        for (let i = 0; i < tr; i++) {
-            const tr = document.createElement('tr');
-            table.appendChild(tr);
-
-            for (let j = 0; j < td; j++) {
-                const td = document.createElement('td');
-                td.innerText = `${text}`;
-                tr.appendChild(td);
-            }
-        }
-    }
-    generator(row, col, txt);
-});
+// // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+// //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+// // (Додатковачастина для завдання)
+//
+// let input1 = document.createElement('input');
+// let input2 = document.createElement('input');
+// let input3 = document.createElement('input');
+//
+// let button = document.createElement('button');
+// button.innerText = 'click';
+//
+// document.body.append(input1, input2, input3, button);
+//
+// button.addEventListener('click', function () {
+//     let row = input1.value;
+//     let col = input2.value;
+//     let txt = input3.value;
+//
+//     let generator = (tr, td, text) => {
+//         let table = document.createElement('table');
+//         document.body.appendChild(table);
+//
+//         for (let i = 0; i < tr; i++) {
+//             const tr = document.createElement('tr');
+//             table.appendChild(tr);
+//
+//             for (let j = 0; j < td; j++) {
+//                 const td = document.createElement('td');
+//                 td.innerText = `${text}`;
+//                 tr.appendChild(td);
+//             }
+//         }
+//     }
+//     generator(row, col, txt);
+// });
